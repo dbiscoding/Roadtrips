@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>RoadTrips Suggetions:</h1>
+{% for place in places %}
+    <h2>{{ place.name }}</h2>
+    {% if place.photos %}
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{ place.photos[0].photo_reference }}&key={{api_key}}" alt="{{ place.name }}">
+    {% endif %}
+{% endfor %}
+<a href="{{url_for('main.dashboard')}}">Search again</a>
+{% endblock %}
