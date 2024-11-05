@@ -3,7 +3,7 @@ class Config(object):
     TESTING = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///trips.db'
     SECRET_KEY = '$2b$12$1'
-    GOOGLE_MAPS_API_KEY = 'AIzaSyD8Zf42FK8P_p3WLwwNoqeEH7-a7XRlNqk'
+    GOOGLE_MAPS_API_KEY = 'Create your own API key and paste it here'
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql://user@localhost/trips'
